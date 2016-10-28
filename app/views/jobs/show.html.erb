@@ -1,0 +1,23 @@
+<div id="job-body">
+  <h1>Emprego Já</h1>
+
+  <h1><%= @job.title %></h1>
+  <hr>
+  <table>
+    <tr>
+      <td class="title">Empresa:</td><td><%= @job.company %></td>
+    </tr>  
+    <tr>
+      <td class="title">Localização:</td> <td><%= @job.location %></td>
+    </tr>
+    <tr>
+      <td class="title">Categoria:</td> <td><%= @job.category %></td>
+    </tr>
+    <tr>
+      <td class="title">Descrição completa:</td> <td><%= @job.description %></td>
+    </tr>
+
+  </table>
+
+  <%= link_to 'Voltar', root_path %>
+</div>
