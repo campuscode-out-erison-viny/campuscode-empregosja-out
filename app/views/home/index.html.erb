@@ -1,8 +1,12 @@
-<h1>Emprego Já</h1>
+<div id="home-body" class="page">
+  <h1 class="title">Emprego Já</h1>
 
-<% @jobs.each do |job| %>
-  <h1><%= link_to job.title, job %></h1>
+  <% @jobs.each do |job| %>
+    <div class="job-container">
+      <h1><%= link_to job.title, job %></h1>
 
-  <p><%= job.company %></p>
-  <p><%= job.location %></p>
-<% end %>
+      <p><%= job.company %></p>
+      <p><%= job.location %></p>
+    </div>
+  <% end %>
+</div>
