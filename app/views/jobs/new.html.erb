@@ -29,6 +29,11 @@
       <%= f.label :description, 'Descrição' %>
       <%= f.text_area :description %>
     </div>
+
+    <div class="row clearfix">
+      <%= f.label :featured, 'Destaque: ' %>
+      <%= f.check_box :featured %>
+    </div>
     
     <div class="buttons clearfix">
       <%= f.submit 'Criar Vaga' %> 

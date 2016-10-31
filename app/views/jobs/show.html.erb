@@ -19,6 +19,12 @@
         <td class="title">Descrição completa:</td> <td><%= @job.description %></td>
       </tr>
 
+      <% if @job.featured %>
+        <tr>
+          <td><strong>Destaque</strong></td>
+        </tr>
+      <% end %>
+
     </table>
   </div>
 
