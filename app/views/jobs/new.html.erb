@@ -1,19 +1,38 @@
-<div id="home-body" class="page">
+<div id="job-new" class="page">
   <h1 class="title">Emprego Já</h1>
-  <h2>Nova Vaga</h2>
-  <%= form_for @job do |f| %>
-    <%= f.label :title, 'Título' %>
-    <%= f.text_field :title %>
-    
-    <%= f.label :company, 'Empresa' %>
-    <%= f.text_field :company %>
-    <%= f.label :location, 'Localização' %>
-    <%= f.text_field :location %>
-    <%= f.label :category, 'Categoria' %>
-    <%= f.text_field :category %>
-    <%= f.label :description, 'Descrição' %>
-    <%= f.text_area :description %>
-    <%= f.submit 'Criar Vaga' %> <%= link_to 'Voltar', root_path %>
   
+  <h2>Nova Vaga</h2>
+  <hr>
+
+  <%= form_for @job do |f| %>
+    <div class="row clearfix">
+      <%= f.label :title, 'Título' %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="row clearfix">
+      <%= f.label :company, 'Empresa' %>
+      <%= f.text_field :company %>
+    </div>
+
+    <div class="row clearfix">
+      <%= f.label :location, 'Localização' %>
+      <%= f.text_field :location %>
+    </div>
+    
+    <div class="row clearfix">
+      <%= f.label :category, 'Categoria' %>
+      <%= f.text_field :category %>
+    </div>
+
+    <div class="row clearfix">
+      <%= f.label :description, 'Descrição' %>
+      <%= f.text_area :description %>
+    </div>
+    
+    <div class="buttons clearfix">
+      <%= f.submit 'Criar Vaga' %> 
+      <%= link_to 'Voltar', root_path %>
+    </div>
   <% end %>
 </div>
