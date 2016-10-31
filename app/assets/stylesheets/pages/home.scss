@@ -1,5 +1,12 @@
 #home-body{
   .job-container{
+    width: 200px;
     padding: 10px;
+    border: 1px solid #ccc;
+
+    h1{
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
