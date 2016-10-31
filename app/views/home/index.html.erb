@@ -4,7 +4,9 @@
   <% @jobs.each do |job| %>
     <div class="job-container">
       <% if job.featured %>
-        <strong>Destaque</strong>
+        <div class="featured">
+          <strong>Destaque</strong>
+        </div>
       <% end %>
       
       <h1><%= link_to job.title, job %></h1>
