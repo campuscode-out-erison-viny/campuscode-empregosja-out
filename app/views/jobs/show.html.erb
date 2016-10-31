@@ -1,7 +1,15 @@
 <div id="job-body" class="page">
   <h1  class="title">Emprego Já</h1>
 
-  <h1><%= @job.title %></h1>
+  <h1 class="title-job">
+    <%= @job.title %>
+    
+    <% if @job.featured %>
+      <div class="featured">
+        <strong>Destaque</strong>
+      </div>
+    <% end %>
+  </h1>
   <hr>
 
   <div class="job-container">
@@ -18,13 +26,6 @@
       <tr>
         <td class="title">Descrição completa:</td> <td><%= @job.description %></td>
       </tr>
-
-      <% if @job.featured %>
-        <tr>
-          <td><strong>Destaque</strong></td>
-        </tr>
-      <% end %>
-
     </table>
   </div>
 

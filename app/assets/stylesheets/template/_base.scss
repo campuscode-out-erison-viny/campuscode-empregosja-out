@@ -22,3 +22,15 @@ h1.title{
   color: #888;
   line-height: 80px;
 }
+
+.featured{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  color: #fff;
+  
+  &:after{
+    content: url('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/star-24.png');      
+  }
+}
