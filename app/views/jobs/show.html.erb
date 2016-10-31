@@ -1,6 +1,4 @@
 <div id="job-body" class="page">
-  <h1  class="title">Emprego Já</h1>
-
   <h1 class="title-job">
     <%= @job.title %>
     
@@ -13,20 +11,21 @@
   <hr>
 
   <div class="job-container">
-    <table>
-      <tr>
-        <td class="title">Empresa:</td><td><%= @job.company %></td>
-      </tr>  
-      <tr>
-        <td class="title">Localização:</td> <td><%= @job.location %></td>
-      </tr>
-      <tr>
-        <td class="title">Categoria:</td> <td><%= @job.category %></td>
-      </tr>
-      <tr>
-        <td class="title">Descrição completa:</td> <td><%= @job.description %></td>
-      </tr>
-    </table>
+    <dl>
+      <div class="row">
+        <dt>Empresa:</dt>
+        <dd><%= @job.company %></dd>
+      </div> 
+      
+      <dt>Localizdtão:</td>
+      <dd><%= @job.location %></dd>
+      
+      <dt>Categoria:</dt>
+      <dd><%= @job.category %></dd>
+      
+      <dt>Descrição completa:</dt>
+      <dd><%= @job.description %></dd>
+    </dl>
   </div>
 
   <%= link_to 'Voltar', root_path %>
