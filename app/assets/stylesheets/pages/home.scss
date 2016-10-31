@@ -1,7 +1,9 @@
 #home-body{
   .job-container{
+    float: left;
     width: 200px;
     padding: 10px;
+    margin: 0 10px 10px 0;
     border: 1px solid #ccc;
 
     h1{

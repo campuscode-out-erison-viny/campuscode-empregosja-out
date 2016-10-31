@@ -1,11 +1,16 @@
-*{ margin: 0; padding: 0; }
+*{ 
+  margin: 0; 
+  padding: 0; 
+  font-weight: normal;
+}
 
-body{ font-family: 'Verdana'; }
+html, body{ font-family: 'Arial'; }
 
-h1{ font-size: 25px; }
+h1{ font-size: 25px; font-weight: 500; }
 
 .page{
-  margin: 10px;
+  width: 1000px;
+  margin: 10px auto;
 }
 
 h1.title{
