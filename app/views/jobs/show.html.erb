@@ -10,21 +10,25 @@
   </h1>
   <hr>
 
-  <div class="job-container">
+  <div class="job-container clearfix">
     <dl>
       <div class="row">
         <dt>Empresa:</dt>
-        <dd><%= @job.company %></dd>
+        <dd><%= @job.company.name %></dd>
       </div> 
       
-      <dt>Localizdtão:</td>
-      <dd><%= @job.location %></dd>
-      
-      <dt>Categoria:</dt>
-      <dd><%= @job.category %></dd>
-      
-      <dt>Descrição completa:</dt>
-      <dd><%= @job.description %></dd>
+      <div class="row">
+        <dt>Localizdtão:</td>
+        <dd><%= @job.location %></dd>
+      </div>
+      <div class="row">
+        <dt>Categoria:</dt>
+        <dd><%= @job.category %></dd>
+      </div>
+      <div class="row">
+        <dt>Descrição completa:</dt>
+        <dd><%= @job.description %></dd>
+      </div>
     </dl>
   </div>
 
