@@ -5,7 +5,7 @@
   <%= form_for @job do |f| %>
     <div class="row clearfix">
       <%= f.label :title, 'Título' %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, required: true%>
     </div>
 
     <div class="row clearfix">
@@ -15,17 +15,17 @@
 
     <div class="row clearfix">
       <%= f.label :location, 'Localização' %>
-      <%= f.text_field :location %>
+      <%= f.text_field :location, required: true %>
     </div>
     
     <div class="row clearfix">
       <%= f.label :category, 'Categoria' %>
-      <%= f.text_field :category %>
+      <%= f.text_field :category, required: true %>
     </div>
 
     <div class="row clearfix">
       <%= f.label :description, 'Descrição' %>
-      <%= f.text_area :description %>
+      <%= f.text_area :description, required: true %>
     </div>
 
     <div class="row clearfix">
