@@ -11,7 +11,28 @@ class JobsController < ApplicationController
 
   def create
     job = Job.create(job_params)
-    redirect_to job_path(job)
+
+    if job.persisted?
+      redirect_to job_path(job)
+    else
+      redirect_to new_job_path, notice: 'Não foi possível criar a vaga'
+    end
+  end
+
+  def edit
+    @job = Job.find params[:id]
+    @companies = Company.all
+  end
+
+  def update
+    job = Job.find params[:id]
+    job.update job_params
+
+    if job.valid?
+      redirect_to job_path(job)
+    else
+      redirect_to edit_job_path(job), notice: 'Não foi possível atualizar a vaga'
+    end
   end
 
   private
