@@ -27,10 +27,8 @@
   </div>
 
   <div id="home-body" class="page">
-  <% if @jobs.blank? %> 
-    <h3>Nenhuma vaga disponível</h3>
-  <% else %>
-    <% @jobs.each do |job| %>
+  <% if @company.jobs.any? %> 
+    <% @company.jobs.each do |job| %>
       <div class="job-container">
         <% if job.featured %>
           <div class="featured">
@@ -44,6 +42,8 @@
         <p><%= job.location %></p>
       </div>
     <% end %>
+  <% else %>
+    <h3>Nenhuma vaga disponível</h3>
   <% end %>
 
 </div>
