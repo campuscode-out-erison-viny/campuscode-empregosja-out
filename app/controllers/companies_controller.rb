@@ -1,7 +1,9 @@
 class CompaniesController < ApplicationController
 
   def show
+    @companies = Company.all
     @company = Company.find params[:id]
+    @jobs = @company.jobs
   end
   
   def new

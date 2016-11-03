@@ -26,5 +26,26 @@
     </dl>
   </div>
 
+  <div id="home-body" class="page">
+  <% if @jobs.blank? %> 
+    <h3>Nenhuma vaga disponível</h3>
+  <% else %>
+    <% @jobs.each do |job| %>
+      <div class="job-container">
+        <% if job.featured %>
+          <div class="featured">
+            <strong>Destaque</strong>
+          </div>
+        <% end %>
+        
+        <h1><%= link_to job.title, job %></h1>
+
+        <p><%= job.category %></p>
+        <p><%= job.location %></p>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>
   <%= link_to 'Voltar', root_path %>
 </div>
