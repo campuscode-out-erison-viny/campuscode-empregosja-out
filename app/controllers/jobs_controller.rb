@@ -10,12 +10,15 @@ class JobsController < ApplicationController
   end
 
   def create
-    job = Job.create(job_params)
+    @job = Job.create(job_params)
 
-    if job.persisted?
-      redirect_to job_path(job)
+    if @job.persisted?
+      redirect_to job_path(@job)
     else
-      redirect_to new_job_path, notice: 'Não foi possível criar a vaga'
+      @companies = Company.all
+      flash[:notice] = "Não foi possível criar a vaga"
+      
+      render :new
     end
   end
 
