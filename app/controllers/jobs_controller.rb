@@ -17,7 +17,7 @@ class JobsController < ApplicationController
       redirect_to job_path(@job)
     else
       companies_all
-      flash[:notice] = "Não foi possível criar a vaga"   
+      flash.now[:notice] = "Não foi possível criar a vaga"   
       render :new
     end
   end
@@ -40,6 +40,7 @@ class JobsController < ApplicationController
   def job_params
     params.require(:job).permit(:title, :company_id, :location, :category, :description, :featured)
   end
+
 
   def target_job
     @job = Job.find params[:id]
