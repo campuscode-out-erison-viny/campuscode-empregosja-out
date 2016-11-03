@@ -1,0 +1,41 @@
+#form-body{
+  .row{
+    width: 100%;
+    float: left;
+    padding: 5px 0;
+  }
+
+  form{
+    margin-top: 30px;
+  }
+
+  label{
+    float: left;
+    width: 200px;
+  }
+
+  input[type=text], textarea, select{
+    float: left;
+    width: 300px; 
+  }
+
+  textarea{
+    height: 50px;
+  }
+
+  .buttons{
+    width: 100%;
+    padding-top: 40px;
+
+    a, input{ 
+      float: left;
+      margin-right: 10px;
+      padding: 2.5px 10px;
+    }
+  }
+
+  .message{
+    margin: 10px 0;
+    color: red;
+  }
+}
