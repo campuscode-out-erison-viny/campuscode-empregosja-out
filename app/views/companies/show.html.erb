@@ -1,0 +1,30 @@
+<div id="job-body" class="page">
+  <h1 class="title-job">
+    <%= @company.name %>
+  </h1>
+  <hr>
+
+  <div class="job-container clearfix">
+    <dl>
+      <div class="row">
+        <dt>Empresa:</dt>
+        <dd><%= @company.name %></dd>
+      </div> 
+      
+      <div class="row">
+        <dt>Localização:</td>
+        <dd><%= @company.location %></dd>
+      </div>
+      <div class="row">
+        <dt>E-mail:</dt>
+        <dd><%= @company.mail %></dd>
+      </div>
+      <div class="row">
+        <dt>Telefone:</dt>
+        <dd><%= @company.phone %></dd>
+      </div>
+    </dl>
+  </div>
+
+  <%= link_to 'Voltar', root_path %>
+</div>
