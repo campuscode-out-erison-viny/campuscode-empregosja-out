@@ -14,15 +14,15 @@
       <p><%= job.location %></p>
     </div>
   <% end %>
-
+  <aside>
+    <h1>Empresas</h1>
+    
+    <ul>
+      <% @companies.each do |c| %>
+      <li><%= link_to c.name, c %></li>
+      <% end %>
+    </ul>
+  </aside>
 </div>
-<aside>
-  <h1>Empresas</h1>
-  
-  <ul>
-    <% @companies.each do |c| %>
-    <li><%= link_to c.name, c %></li>
-    <% end %>
-  </ul>
-</aside>
+
 
