@@ -11,9 +11,9 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.create(job_params)
+    @job = Job.new(job_params)
 
-    if @job.persisted?
+    if @job.save
       redirect_to job_path(@job)
     else
       companies_all
