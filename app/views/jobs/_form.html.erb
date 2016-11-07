@@ -15,8 +15,8 @@
   </div>
   
   <div class="row clearfix">
-    <%= f.label :category, 'Categoria' %>
-    <%= f.text_field :category  %>
+    <%= f.label :category_id, 'Categoria' %>
+    <%= f.collection_select(:category_id, @categories, :id, :name, {prompt: true}) %>
   </div>
 
   <div class="row clearfix">

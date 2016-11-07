@@ -1,7 +1,8 @@
 class JobsController < ApplicationController
 
   before_action :target_job, only: [:show, :edit, :update]
-  before_action :companies_all, only: [:new, :edit]
+  before_action :items_for_jobs, only: [:new, :edit]
+  
 
   def show
   end
@@ -16,7 +17,7 @@ class JobsController < ApplicationController
     if @job.persisted?
       redirect_to job_path(@job)
     else
-      companies_all
+      items_for_jobs
       flash.now[:notice] = "Não foi possível criar a vaga"   
       render :new
     end
@@ -38,7 +39,7 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :company_id, :location, :category, :description, :featured)
+    params.require(:job).permit(:title, :company_id, :location, :category_id, :description, :featured)
   end
 
 
@@ -46,8 +47,9 @@ class JobsController < ApplicationController
     @job = Job.find params[:id]
   end
 
-  def companies_all
+  def items_for_jobs
     @companies = Company.all
+    @categories = Category.all
   end
 
 end
