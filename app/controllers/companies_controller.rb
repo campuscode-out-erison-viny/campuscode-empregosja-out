@@ -9,9 +9,9 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.create(company_params)
+    @company = Company.new(company_params)
 
-    if @company.persisted?
+    if @company.save
       redirect_to company_path(@company)
     else
       flash[:notice] = "Não foi possível criar a empresa"
