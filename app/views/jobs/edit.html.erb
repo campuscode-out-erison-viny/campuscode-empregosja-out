@@ -2,12 +2,6 @@
   <h2>Editar Vaga</h2>
   <hr>
 
-  <% if flash[:notice] %>
-    <div class="message">
-      <%= flash[:notice] %>
-    </div>
-  <% end %>
-
   <%= render partial: 'form', locals: { 
     submit_text: 'Atualizar Vaga' 
   } %>

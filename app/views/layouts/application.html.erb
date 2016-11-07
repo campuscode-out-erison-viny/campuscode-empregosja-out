@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Empregosja</title>
+    <title>Emprego já</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,9 @@
   </head>
 
   <body>
-    <h1 class="title">Emprego Já</h1>
+    <%= link_to root_path do %>
+      <h1 class="title">Emprego Já</h1>
+    <% end %>
     
     <%= yield %>
   </body>
