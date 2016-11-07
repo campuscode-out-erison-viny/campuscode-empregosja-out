@@ -1,10 +1,10 @@
-<div id="job-body" class="page">
+<div id="company-body" class="page">
   <h1 class="title-job">
     <%= @company.name %>
   </h1>
   <hr>
 
-  <div class="job-container clearfix">
+  <div class="company-container clearfix">
     <dl>
       <div class="row">
         <dt>Empresa:</dt>
@@ -26,13 +26,13 @@
     </dl>
   </div>
 
-  <div id="home-body" class="page">
-  <% if @company.jobs.any? %> 
-    <%= render @company.jobs %>
-  <% else %>
-    <h3>Nenhuma vaga disponível</h3>
-  <% end %>
+  <div class="jobs-container">
+    <% if @company.jobs.any? %> 
+      <%= render @company.jobs %>
+    <% else %>
+      <h3>Nenhuma vaga disponível</h3>
+    <% end %>
+  </div>
 
-</div>
   <%= link_to 'Voltar', root_path %>
 </div>
