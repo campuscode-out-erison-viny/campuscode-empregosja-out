@@ -1,0 +1,16 @@
+<div id="category-body" class="page">
+  <h1 class="title-job">
+    <%= @category.name %>
+  </h1>
+  <hr>
+
+  <div class="jobs-container">
+    <% if @category.jobs.any? %> 
+      <%= render @category.jobs %>
+    <% else %>
+      <h3>Nenhuma vaga disponível</h3>
+    <% end %>
+  </div>
+
+  <%= link_to 'Voltar', root_path %>
+</div>
