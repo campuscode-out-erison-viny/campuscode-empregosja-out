@@ -1,4 +1,6 @@
 <div id="company-body" class="page">
+  <h1>Vagas</h1>
+  
   <h1 class="title-job">
     <%= @company.name %>
   </h1>
@@ -26,11 +28,11 @@
     </dl>
   </div>
 
-  <div class="jobs-container">
+  <div class="jobs-container  clearfix">
     <% if @company.jobs.any? %> 
       <%= render @company.jobs %>
     <% else %>
-      <h3>Nenhuma vaga disponível</h3>
+      <h3 class='message'>Nenhuma vaga disponível</h3>
     <% end %>
   </div>
 
