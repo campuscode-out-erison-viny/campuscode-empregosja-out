@@ -1,19 +1,7 @@
 <div id="home-body" class="page">
 
-  <% @jobs.each do |job| %>
-    <div class="job-container">
-      <% if job.featured %>
-        <div class="featured">
-          <strong>Destaque</strong>
-        </div>
-      <% end %>
-      
-      <h1><%= link_to job.title, job %></h1>
-
-      <p><%= job.company.name %></p>
-      <p><%= job.location %></p>
-    </div>
-  <% end %>
+  <%= render @jobs %>
+  
   <aside>
     <h1>Empresas</h1>
     
