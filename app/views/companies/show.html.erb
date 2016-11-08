@@ -3,6 +3,11 @@
   
   <h1 class="title-job">
     <%= @company.name %>
+    <% if @company.premium? %>
+      <div class="featured">
+        <%= image_tag ('estrela.png') %>
+      </div>
+    <% end %>
   </h1>
   <hr>
 
