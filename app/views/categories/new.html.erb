@@ -1,5 +1,9 @@
-<h1>Emprego já</h1>
-
+<% if flash[:notice] %>
+  <div class="message">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+  
 <%= form_for @category do |f| %>
   <%= f.label :name, "Nome" %>
   <%= f.text_field :name %>
