@@ -103,7 +103,7 @@ pt-BR:
       second: Segundo
       year: Ano
   errors:
-    format: "%{attribute} %{message}"
+    format: "<span>%{attribute}</span> %{message}"
     messages:
       accepted: deve ser aceito
       blank: não pode ficar em branco
