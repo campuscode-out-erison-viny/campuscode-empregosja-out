@@ -1,6 +1,8 @@
-<% if flash[:notice] %>
+<% if @category.errors.any? %>
   <div class="message">
-    <%= flash[:notice] %>
+    <% @category.errors.full_messages.each do |message| %>
+      <p><%= message.html_safe %></p>
+    <% end %>
   </div>
 <% end %>
   

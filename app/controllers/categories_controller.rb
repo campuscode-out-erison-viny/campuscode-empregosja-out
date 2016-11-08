@@ -11,13 +11,9 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new params_require
     
-    if Category.find_by_name(@category.name).nil?
-      @category.save
-      
+    if @category.save
       redirect_to category_path(@category)
     else
-      flash.now[:notice] = "Categoria já utilizada"
-
       render :new
     end
   end

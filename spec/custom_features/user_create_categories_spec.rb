@@ -21,7 +21,16 @@ feature 'User create categories' do
 
     click_on 'Criar Categoria'
 
-    expect(page).to have_content('Categoria já utilizada')
+    expect(page).to have_content('já está em uso')
     expect(page).to have_current_path(categories_path)
+  end
+
+  scenario 'Should fill all fields' do
+    visit new_category_path
+
+    click_on 'Criar Categoria'
+    
+    expect(page).to have_current_path(categories_path)
+    expect(page).to have_content 'não pode ficar em branco'    
   end
 end
