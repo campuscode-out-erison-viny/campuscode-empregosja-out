@@ -1,7 +1,11 @@
 <% if @category.errors.any? %>
   <div class="message">
-    <% @category.errors.full_messages.each do |message| %>
-      <p><%= message.html_safe %></p>
+    <% @category.errors.messages.each do |attribute, errors| %>
+      <span><%= attribute %></span>
+      
+      <% errors.each do |error| %>
+        <p><%= "#{error};" %></p>
+      <% end %>
     <% end %>
   </div>
 <% end %>
