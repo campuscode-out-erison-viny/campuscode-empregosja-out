@@ -1,0 +1,32 @@
+<% if flash[:notice] %>
+  <div class="message">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= form_for @company do |f| %>
+  <div class="row clearfix">
+    <%= f.label :name, 'Nome' %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="row clearfix">
+    <%= f.label :location, 'Localização' %>
+    <%= f.text_field :location  %>
+  </div>
+  
+  <div class="row clearfix">
+    <%= f.label :mail, 'Email' %>
+    <%= f.text_field :mail  %>
+  </div>
+
+  <div class="row clearfix">
+    <%= f.label :phone, 'Telefone' %>
+    <%= f.text_area :phone  %>
+  </div>
+
+  <div class="buttons clearfix">
+    <%= f.submit 'Criar Empresa' %> 
+    <%= link_to 'Voltar', root_path %>
+  </div>
+<% end %>

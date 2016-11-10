@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
+  before_action :get_company, only: [:show, :edit]
 
   def show
-    @company = Company.find params[:id]
   end
   
   def new
@@ -19,7 +19,17 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+  end
+
   private
+
+  def get_company
+    @company = Company.find params[:id]
+  end
 
   def company_params
     params.require(:company).permit(:name, :location, :mail, :phone)
