@@ -7,8 +7,15 @@
         <strong>Destaque</strong>
       </div>
     <% end %>
+
   </h1>
   <hr>
+
+  <% if @job.expired? %>
+    <div class="expired">
+      <strong>Vaga Expirada</strong>
+    </div>
+  <% end %>
 
   <div class="clearfix">
     <dl>

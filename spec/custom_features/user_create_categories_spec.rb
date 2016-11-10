@@ -21,7 +21,7 @@ feature 'User create categories' do
 
     click_on 'Criar Categoria'
 
-    expect(page).to have_content('já está em uso')
+    expect(page).to have_content('has already been taken')
     expect(page).to have_current_path(categories_path)
   end
 
@@ -31,6 +31,6 @@ feature 'User create categories' do
     click_on 'Criar Categoria'
     
     expect(page).to have_current_path(categories_path)
-    expect(page).to have_content 'não pode ficar em branco'    
+    expect(page).to have_content "can't be blank"
   end
 end

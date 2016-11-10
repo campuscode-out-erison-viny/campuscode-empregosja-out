@@ -1,13 +1,15 @@
-<div class="job-container">
-  <% if job.featured %>
-    <div class="featured">
-      <strong>Destaque</strong>
-    </div>
-  <% end %>
-  
-  <h1><%= link_to job.title, job %></h1>
+<% unless job.expired? %>
+  <div class="job-container">
+    <% if job.featured %>
+      <div class="featured">
+        <strong>Destaque</strong>
+      </div>
+    <% end %>
+    
+    <h1><%= link_to job.title, job %></h1>
 
-  <p><%= job.category.name %></p>
-  <p><%= job.company.name %></p>
-  <p><%= job.location %></p>
-</div>
+    <p><%= job.category.name %></p>
+    <p><%= job.company.name %></p>
+    <p><%= job.location %></p>
+  </div>
+<% end %>
