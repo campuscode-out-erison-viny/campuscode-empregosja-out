@@ -12,6 +12,12 @@
     <%= link_to root_path do %>
       <h1 class="title">Emprego Já</h1>
     <% end %>
+
+    <% if flash[:notice] %>
+      <div class="message">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     
     <%= yield %>
   </body>

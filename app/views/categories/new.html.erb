@@ -1,17 +1,2 @@
-<% if @category.errors.any? %>
-  <div class="message">
-    <% @category.errors.messages.each do |attribute, errors| %>
-      <span><%= attribute %></span>
-      
-      <% errors.each do |error| %>
-        <p><%= "#{error};" %></p>
-      <% end %>
-    <% end %>
-  </div>
-<% end %>
+<%= render partial: 'form', locals: { submit_tag: 'Criar Categoria' } %>
   
-<%= form_for @category do |f| %>
-  <%= f.label :name, "Nome" %>
-  <%= f.text_field :name %>
-  <%= f.submit "Criar Categoria" %>
-<% end %>
