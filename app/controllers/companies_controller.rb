@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
+  before_action :get_company, only: [:show, :edit, :update]
 
   def show
-    @company = Company.find params[:id]
   end
   
   def new
@@ -19,7 +19,24 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @company.update(company_params)
+      redirect_to company_path(@company)
+    else
+      flash[:notice] = "Não foi possível atualizar a empresa"
+
+      render :edit
+    end
+  end
+
   private
+
+  def get_company
+    @company = Company.find params[:id]
+  end
 
   def company_params
     params.require(:company).permit(:name, :location, :mail, :phone)
