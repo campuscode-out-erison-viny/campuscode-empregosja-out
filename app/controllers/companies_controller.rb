@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  before_action :get_company, only: [:show, :edit]
+  before_action :get_company, only: [:show, :edit, :update]
 
   def show
   end
@@ -23,6 +23,13 @@ class CompaniesController < ApplicationController
   end
 
   def update
+    if @company.update(company_params)
+      redirect_to company_path(@company)
+    else
+      flash[:notice] = "Não foi possível atualizar a empresa"
+
+      render :edit
+    end
   end
 
   private
