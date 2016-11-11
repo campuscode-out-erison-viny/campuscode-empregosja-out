@@ -7,4 +7,8 @@ class Job < ApplicationRecord
   def expired?
     created_at < 90.days.ago
   end
+
+  def recent?
+    created_at > 6.days.ago
+  end
 end

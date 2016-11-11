@@ -5,11 +5,14 @@
         <strong>Destaque</strong>
       </div>
     <% end %>
-    
+    <% if job.recent? %>
+      <h1>Novidade</h1>
+    <% end %>
     <h1><%= link_to job.title, job %></h1>
 
     <p><%= job.category.name %></p>
     <p><%= job.company.name %></p>
     <p><%= job.location %></p>
+
   </div>
 <% end %>
